@@ -1,0 +1,18 @@
+en
+conf t
+ip routing
+
+int eth1
+no switchport
+ip addr 10.10.10.26/30
+no shut
+ip ospf area 0
+
+int lo1
+ip addr 66.66.66.66/32
+ip ospf area 0
+
+router ospf 1
+router-id 66.66.66.66
+
+do wr me
