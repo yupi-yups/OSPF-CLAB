@@ -1,0 +1,25 @@
+int g1/0/0
+undo portswitch
+ip addr 10.10.10.1 30
+ospf enable 1 area 0
+undo shutdown
+#
+int g1/0/1
+undo portswitch
+ip addr 10.10.10.5 30
+ospf enable 1 area 0
+undo shutdown
+#
+int g1/0/2
+undo portswitch
+ip addr 10.10.10.18 30
+ospf enable 1 area 0
+undo shutdown
+#
+int loopback 1
+ip add 11.11.11.11 32
+ospf enable 1 area 0
+#
+ospf 1 router-id 11.11.11.11
+area 0
+#
