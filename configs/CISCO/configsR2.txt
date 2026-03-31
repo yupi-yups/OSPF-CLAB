@@ -1,3 +1,4 @@
+conf t
 int g0/1
 no switchport
 ip addr 10.10.10.2 255.255.255.252
@@ -23,4 +24,3 @@ ip ospf 1 area 0
 router ospf 1 
 router-id 22.22.22.22
 !
-do wr me
